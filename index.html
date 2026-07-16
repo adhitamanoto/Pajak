@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Misi Terakhir - mini game singkat tentang meja praktikum terakhir 3EA05 dan satu dokumen yang belum ditemukan." />
+    <title>Misi Terakhir</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <section class="screen intro active" id="introScreen">
+        <div class="eyebrow">Mini Cerita &bull; Game Browser</div>
+        <h1>Misi Terakhir</h1>
+        <p class="lead">
+          Semester hampir berakhir.
+        </p>
+
+        <div class="intro-card">
+          <div class="icon-row" aria-hidden="true">
+            <span class="icon-chip">&star;</span>
+            <span class="icon-chip">&bull;</span>
+            <span class="icon-chip">&diamond;</span>
+          </div>
+          <p>
+            Sebelum semuanya selesai, bantu mahasiswa 3EA05 merapikan meja praktikum. Temukan semua dokumen pajak yang dibutuhkan.
+            <br /><br />
+            Kabarnya... masih ada satu dokumen terakhir yang belum ditemukan.
+          </p>
+          <div class="control-pill">Ketuk atau klik dokumen yang benar</div>
+        </div>
+
+        <button id="startButton" class="action-button" type="button">Mulai misi</button>
+      </section>
+
+      <section class="screen game-screen" id="gameScreen">
+        <div class="hud">
+          <div class="hud-chip" id="missionChip">Meja 1/3</div>
+          <div class="hud-chip" id="scoreChip">Dokumen ditemukan: 0/4</div>
+        </div>
+        <p class="mission-subtitle">Cari semua dokumen pajak yang diminta.</p>
+
+        <div class="game-frame" id="gameFrame">
+          <div class="timer-track" aria-label="Sisa waktu ronde">
+            <div class="timer-fill" id="timerFill"></div>
+          </div>
+          <div class="desk" id="desk" role="group" aria-label="Meja kantor berisi dokumen dan benda kecil"></div>
+          <div class="completion-panel" id="completionPanel" hidden>
+            <p class="eyebrow">Misi Selesai</p>
+            <h2>Memeriksa dokumen...</h2>
+            <div class="checklist" id="checklist" aria-live="polite"></div>
+            <p class="searching-line" id="searchingLine">Mencari...</p>
+            <p class="found-line" id="foundLine">Satu dokumen tertutup ditemukan.</p>
+            <button id="openDocumentButton" class="action-button" type="button">Buka Dokumen</button>
+          </div>
+          <div class="letter-scene" id="letterScene" hidden>
+            <div class="envelope" id="envelope" aria-hidden="true">
+              <div class="envelope-flap"></div>
+              <div class="envelope-body"></div>
+            </div>
+            <article class="letter-paper" id="letterPaper" aria-live="polite">
+              <h2>Untuk<br />KP Clara<br />&amp;<br />Tutor Dhiyaa</h2>
+              <p id="letterText"></p>
+            </article>
+          </div>
+          <div class="story-bubble" id="storyBubble" aria-live="polite">Cari dokumen yang diminta.</div>
+        </div>
+
+        <p class="hint">Pilih hanya dokumen pajak. Benda lain boleh dibiarkan saja.</p>
+      </section>
+
+      <section class="screen ending" id="endingScreen">
+        <div class="ending-card">
+          <p class="eyebrow" id="endingEyebrow">Misi selesai</p>
+          <h2 id="endingTitle">Ternyata bukan cuma soal berkas.</h2>
+          <p class="ending-copy" id="endingCopy">
+            Dokumen terakhir itu ternyata bukan berkas pajak. Isinya sederhana: ucapan terima kasih untuk KP Clara dan Tutor Dhiyaa karena membuat praktikum semester ini terasa lebih ringan, lebih ramah, dan lebih menyenangkan.
+          </p>
+          <div class="signature" id="endingSignature">Dari satu mahasiswa, dengan senyum.</div>
+          <div class="name-block" id="endingNames">KP Clara &bull; Tutor Dhiyaa</div>
+          <button id="restartButton" class="action-button" type="button">Main lagi</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
