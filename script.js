@@ -23,7 +23,7 @@ const endingNames = document.getElementById('endingNames');
 const endingCard = endingScreen.querySelector('.ending-card');
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const thankYouCopy = 'Dokumen terakhir itu ternyata bukan berkas pajak. Isinya sederhana: ucapan terima kasih untuk KP Clara dan Tutor Dhiyaa karena membuat praktikum semester ini terasa lebih ringan, lebih ramah, dan lebih menyenangkan.';
+const thankYouCopy = 'Dokumen terakhir itu ternyata bukan berkas pajak. Isinya sederhana: ucapan terima kasih untuk KP Kak Clara dan Tutor Kak Dhiyaa karena membuat praktikum semester ini terasa lebih ringan, lebih ramah, dan lebih menyenangkan.';
 const letterBody = `Terima kasih sudah membimbing kami
 selama Praktikum Komputerisasi Pajak
 semester ini.
